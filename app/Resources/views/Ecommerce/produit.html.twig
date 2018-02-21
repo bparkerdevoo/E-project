@@ -1,0 +1,70 @@
+{% extends "::Layout.html.twig" %}
+
+{% block body %}
+
+    <div class="span3">
+        {% include "::layout/modulesUsed/nav.html.twig" %}
+    </div>
+
+    <div class="span4 offset3">
+<h2>LISTE PRODUITS</h2>
+
+    </div>
+            <div class="row">
+                <div class="span8 offset2">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered">
+                            <caption></caption>
+                            <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"> nom produit</th>
+                                <th scope="col">Categorie</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">PRIX</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for produit in produits %}
+                            <tr>
+                                <td scope="row">{{ produit.brochure }}</td>
+                                <td scope="row">{{ produit.nom }}</td>
+                                <td>{{ produit.description }}</td>
+                                <td>{{ produit.prix }}</td>
+                                <td>{{ produit.description }}</td>
+                                <td><a href="{{ path('ajouterAuPanier', {'id':produit.id}) }}">Panier</a></td>
+                                
+                            </tr>
+                            {% endfor %}
+                        </table>
+                        {{ dump(app.session.get('panier')) }}
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <hr>
+            </div>
+
+    </div>
+    </div>
+
+            <div class="span8">
+
+
+                <div class="pagination">
+                    <ul>
+                        <li class="disabled"><span>Précédent</span></li>
+                        <li class="disabled"><span>1</span></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">Suivant</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

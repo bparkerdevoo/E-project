@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}MyScentFactory{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href=" {{ asset ('css/bootstrap.css') }}" />
+        <link rel="stylesheet" href=" {{ asset ('css/bootstrap-responsive.css') }}" />
+        <link rel="stylesheet" href=" {{ asset ('css/style.css') }}" />
+        <link rel="stylesheet" href=" {{ asset ('css/fontawesome.css') }}" />
+        <!-- Google-code-prettify -->
+        <link href="{{ asset('css/prettify.css') }}" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bmatznerfontawesome/css/font-awesome.min.css') }}" />
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+
+</head>
+<body>
+<header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+
+        <div class="navbar-inner">
+            <div class="container">
+                <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="{{ path('homepage') }}">My Scent Factory</a>
+
+
+                <div class="nav-collapse collapse">
+                    <form class="navbar-form form-search pull-right">
+                        <input id="Search" name="Search" type="text" class="input-medium search-query">
+                        <button type="submit" class="btn">Rechercher</button>
+
+
+                        {## if is_granted('ROLE_USER') %}
+                            <li><a href="{{ path('security_logout') }}">Logout</a></li>
+                        {% else %}
+                            <li><a href="{{ path('security_login') }}">Login</a></li>
+                        {% endif #}
+
+                       <a href=""><i class="fa fa-sign-in fa-2x"></i></a>
+
+                        <a href="{{ path('homepage') }}"><i class="fa fa-user fa-2x"></i></a>
+                        <a href="{{ path('homepage') }}"><i class="fa fa-shopping-cart fa-2x"></i></a>
+                    </form>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<body class="container-fluid" >
+{% block body %}
+    <div class="row">
+        <h1 class="page-header text-center">
+            Bienvenue
+            {#{#}{# app.user ? app.user.email : '' }}!#}
+        </h1>
+    </div>
+{% endblock %}
+
+</body>
+
+
+<hr />
+<footer id="footer" class="vspace20">
+    <div class="container" >
+        <div class="row">
+            <div class="span4 offset1">
+                <h4>Informations</h4>
+                <ul class="nav nav-stacked">
+                    <li><a href="{{ path('homepage') }}">MENTIONS LEGALES</a></li>
+
+
+                </ul>
+            </div>
+            <div class="span4">
+                <h4>Notre boutique</h4>
+                <p><i class="fa fa-location"></i>&nbsp;Meudon 92000s</p>
+            </div>
+            <div class="span2">
+                <h4>Nous contacter</h4>
+                <i class="fa fa-envelope-o fa-1x"></i>
+
+
+                <p><i class="fa fa-phone"></i>&nbsp;Tel: 01 54 00 00</p>
+                <p><i class="fa fa-print"></i>&nbsp;Fax: 01 54 00 00 00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span4">
+                <p>&copy; Copyright 2017 - ParkerCom</p>
+            </div>
+        </div>
+    </div>
+</footer>
+{% block javascripts %}
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+{% endblock %}
+</body>
+</html>
+

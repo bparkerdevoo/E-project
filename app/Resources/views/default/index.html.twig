@@ -1,0 +1,185 @@
+{% extends "Layout.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="container">
+
+            <div class="span8 offset2">
+                <h1>BIENVENUE CHEZ MY SCENT FACTORY</h1>
+
+            </div>
+            </div>
+            <div class="container">
+
+                <div class="span8 offset2">
+
+                    <h4>Le Bar d'ambiances</h4>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="span10 offset2">
+
+            {##}{# for photo in image %}
+                <img src="{{ asset(photo.path) }}" alt="{{ photo.alt }}" height="200" width="200"  >
+
+            #}{##}{# endfor %}#}
+                        </div>
+                </div>
+
+            </div>
+    <hr>
+    <div class="row">
+
+    {% block citations %}
+                    <div class="span6">
+                        <p>Ici laissez libre court à vos désires d'ambiance.</p>
+                        <p>MyScentFactory - <em>'Mon laboratoire de parfum'</em>, vos propose une opportunité de jouer à l'apprenti parfumeur , en association divers
+                            <a href="">fragrance</a>, au <a href="">support</a> de diffusion de votre choix.</p>
+                    </div>
+        <div class="span6">
+
+        <p> MSF est votre terrain de jeux, pour recevoir  ou offrir un parfum d'ambiance des plus personnalisé, mais aussi naturels.</p>
+
+                    </div>
+
+                {% endblock citations %}
+    </div>
+    <hr>
+    <div class="row">
+
+            <div class="span12">
+
+                <h2>Shopping creation</h2>
+
+            </div>
+
+
+        {% block introduction %}
+                    <div class="  span3 offset1 ">
+
+                        <div class="span3">
+                            <img src="{{ asset('img/fragrance_helper1.jpg') }}" alt="inspiration" height="100" width="100" ) >
+                        </div>
+                        <div class="span3">
+                            <hr>
+                        </div>
+                        <div class="span3">
+                            <a href="" class="btn btn-default">INSPIRATION</a>
+                        </div>
+                        <div class="span3">
+                            <hr>
+                        </div>
+                        <div class="span3">
+                            <H4>1- Selectionner une inspiration</H4>
+                        </div>
+                    </div>
+
+                    <div class="  span3 offset1">
+
+                        <div class="span3">
+                            <img src="{{ asset('img/msf_spray.jpg') }}" alt="inspiration" height="100" width="100" ) >
+                        </div>
+                        <div class="span3">
+                            <hr>
+                        </div>
+                        <div class="span3">
+                            <a href="" class="btn btn-default">CHOIX DE PARFUMS</a>
+                        </div>
+                        <div class="span3">
+                            <hr>
+                        </div>
+                        <div class="span3">
+                            <h4>2 - Composer parmis nos divers parfums</h4>
+
+                        </div>
+                    </div>
+                    <div class="span3 offset1">
+
+                        <div class="span3">
+                            <img src="{{ asset('img/msf_burner.png') }}" alt="inspiration" height="100" width="100" ) >
+                        </div>
+                        <div class="span3">
+                            <hr>
+                        </div>
+                        <div class="span3">
+                            <a href="" class="btn btn-default">CHOIX DE SUPPORTS</a>
+                        </div>
+                        <div class="span3">
+                            <hr>
+                        </div>
+                        <div class="span3">
+
+                            <h4>3 - Associez votre support au parfum choisi</h4>
+                        </div>
+                    </div>
+                {% endblock introduction %}
+
+        <div class="row">
+            <div class="span12">
+                <hr>
+                <H2>Le concept ... <a href="">A propos de la créatrice</a></H2>
+                    <img src="{{ asset('img/msf_blog1.png') }}" alt="">
+            </div>
+        </div>
+{% block blog %}
+    <div class="container-fluid">
+    <hr>
+        <div class="row">
+            <div class="span12">
+
+            <div class="span4 offset-2 ">
+
+
+
+                        <h3>BLOG #msfFamilly</h3>
+
+
+                        <hr>
+                        <p>Nos clients sont les mieux placé pour décrire leurs expériences MSF</p>
+                        <a href="">En Savoir plus</a>
+            </div>
+            <div class="span4 offset2">
+
+
+
+
+                <a href=""><img class="rounded" src="{{ asset('img/msf_situation2.jpg') }}" alt=""height="500" width="500"></a>
+            </div>
+    </div>
+
+    </div>
+        <hr>
+        <div class="row">
+            <div class="span12">
+
+                <div class="span4 offset-2 ">
+                    <a href=""><img class="rounded" src="{{ asset('img/msf_situation1.jpg') }}" alt="" height="500" width="500" ></a>
+
+
+
+                </div>
+                <div class="span4 offset2">
+
+                    <h3>News #msfÉvènement</h3>
+
+                    <hr>
+                    <a href="">MSFEvents propose:</a>
+                    <p>Des ateliers découverte de senteurs, de la confection artisanal, parfum ma maison DIY, et plus encore</p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    </div>
+
+    {% endblock blog %}
+
+
+{% endblock %}

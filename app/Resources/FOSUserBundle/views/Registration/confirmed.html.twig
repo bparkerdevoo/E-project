@@ -1,0 +1,27 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+    <div class="row">
+        <h2>Enregistrement réussi!!!</h2>
+    </div>
+    <div class="row">
+        <h4>vous pouvez vous connecter</h4>
+    </div>
+    <div class="span4">
+        <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+        {% if targetUrl %}
+            <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+        {% endif %}
+    </div>
+    <div class="span4 offset2">
+        {% include 'UserBundle:nav_inc:utilisateursConfirme.html.twig' %}
+    </div>
+
+
+
+
+
+
+{% endblock fos_user_content %}

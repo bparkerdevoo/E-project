@@ -1,0 +1,112 @@
+{% extends "::Layout.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="span3">
+                {% include "::layout/modulesUsed/nav.html.twig" %}
+            </div>
+            <div class="span12">
+                <H1>Nos suggestion de composition</H1>
+                <div class="span12">
+                    <div class="row">
+                        <hr>
+                    </div>
+                </div>
+    {% for suggestions in suggestions %}
+                <div class="span6">
+                    <H2>Ambiance {{ suggestions.idParfum }} </H2>
+                    <div class="3">
+                        <h4>description: {{ suggestions.idSupport }}</h4>
+                            <h4>parfum: {{ suggestions.idCustom }}</h4>
+                                <h4>support: {{ suggestions.idSupport }}</h4>
+
+
+                    </div>
+                </div>
+                <div class="span2">
+                    <img src="{{ asset('img/msf_spray.jpg') }}" alt="MSF" width="300" height="300">
+                </div>
+                <div class="span2">
+                    <img src="{{ asset('img/msf_spray.jpg') }}" alt="MSF" width="300" height="300">
+                </div>
+                <div class="span12">
+                    <div class="row">
+                        <div class="span6">
+                            <h4>{{ suggestions.idSupport }} et {{ suggestions.idSupport }}</h4>
+                            <h5>{{ suggestions.idSupport }}</h5>
+                            <p>{{ suggestions.idSupport }}</p>
+                            <h4>{{ suggestions.prix }}</h4>
+                            <form action="{{ path('panier') }}">
+
+
+                                <select name="qte" class="span1">
+                                    <option>1</option>
+                                </select>
+
+                                <div>
+                                    <button class="btn btn-primary">Ajouter au panier</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+      {% endfor %}
+
+                <div class="span12">
+                    <div class="row">
+                        <hr>
+                    </div>
+                </div>
+
+            </div>
+            <div class="span12">
+                <div class="row">
+                    <hr>
+                </div>
+            </div>
+    <div class="span12">
+        <div class="row">
+            <H1>Recemment consulté</H1>
+
+        </div>
+    </div>
+            <div class="span12">
+                <div class="row">
+                    <hr>
+                </div>
+            </div>
+            <div class="span12">
+                <div class="row">
+
+                    <div class="span4">
+                        <img src="{{ asset('img/msf_spray.jpg') }}" alt="MSF" width="300" height="300">
+                    </div>
+
+                    <div class="span6">
+                        <h4>Item Brand and Category</h4>
+                        <h5>AB29837 Item Model</h5>
+                        <p>PRÉSENTATION DU PRODUITS.</p>
+                        <h4>23.33€</h4>
+                        <form action="{{ path('panier') }}">
+
+
+                            <select name="qte" class="span1">
+                                <option>1</option>
+                            </select>
+
+                            <div>
+                                <button class="btn btn-primary">Ajouter au panier</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

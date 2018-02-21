@@ -1,0 +1,43 @@
+{% extends "::layout/Layout.html.twig" %}
+{% block body %}
+    {% block avis %}
+        <h2>{{ avis }}</h2>
+<div class="avis-container">
+    <div class="msf-img"></div>
+    <div class="description">
+        <dl class="description-list">
+            <dt>Categorie:</dt>
+            <dd>Parfum</dd>
+            <dt>Produit associé:</dt>
+            <dd>huiles</dd>
+            <dt>origines</dt>
+            <dd>afrique</dd>
+        </dl>
+    </div>
+</div>
+<div id="js-avis-wrapper"></div>
+
+
+
+
+    {% endblock avis %}
+{% endblock body %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src=" (https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>
+    <script src="(https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.js"></script>
+
+    <script src="(https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+    <script type="text/babel" src="{{ asset('js/avis.react.js')}}"></script>
+    <script type="text/babel">
+        var avisUrl = '{{ path('afficher_avis', {'avis': avis}) }}';
+        ReactDOM.render(
+            <AvisSection url={avisUrl} />
+            document.getElementById('js-avis-wrapper')
+        );
+    </script>
+
+
+{% endblock %}

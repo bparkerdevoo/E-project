@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="parkercoae@ssh.cluster021.hosting.ovh.net">
+    <serverData>
+      <paths name="parkercoae@ssh.cluster021.hosting.ovh.net">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/parkercoae/www/MyEcommerce/web" local="$PROJECT_DIR$" web="/parkercommunication.pro" />
+            <mapping deploy="/www/MyEcommerce/web" local="$PROJECT_DIR$/web" web="/parkercommunication.pro" />
+            <mapping deploy="/www/MyEcommerce" local="$PROJECT_DIR$/web" web="/parkercommunication.pro" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

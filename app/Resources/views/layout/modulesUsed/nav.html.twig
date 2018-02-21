@@ -1,0 +1,23 @@
+{% block body %}
+
+     <div class="span3">
+     <div class="well">
+            <ul class="nav nav-list">
+                <li class="nav-header"> My Scent Factory</li>
+                <li class="active">
+                    <a href="{{ path('catalogue_produits') }}">Catalogue des Supports</a>
+                </li>
+                <li>
+                    <a href="{{ path('catalogue_produits') }}">Catalogue des parfums</a>
+                </li>
+                <li>
+                    <a href="{{ path('suggestion') }}">Les accessoires</a>
+                </li>
+                <li>
+                    <a href="{{ path('suggestion') }}">Nos Suggestions</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}

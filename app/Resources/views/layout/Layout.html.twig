@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}MyScentFactory{% endblock %}</title>
+        <link rel="stylesheet" href=" {{ asset ('css/bootstrap.css') }}" />
+        <link rel="stylesheet" href=" {{ asset ('css/bootstrap-responsive.css') }}" />
+        <link rel="stylesheet" href=" {{ asset ('css/style.css') }}" />
+        <link rel="stylesheet" href=" {{ asset ('css/fontawesome.css') }}" />
+        <link rel="stylesheet" href=" {{ asset ('css/fontawesome/fontawesome.css') }}" />
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bmatznerfontawesome/css/font-awesome.min.css') }}" />
+    </head>
+    <body>
+    <header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+
+        <div class="navbar-inner">
+            <div class="container">
+                <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="{{ path('accueil') }}">My Scent Factory</a>
+
+
+                <div class="nav-collapse collapse">
+                    <form class="navbar-form form-search pull-right">
+                        <input id="Search" name="Search" type="text" class="input-medium search-query">
+                        <button type="submit" class="btn">Rechercher</button>
+                        <a href="{{ path('fos_user_profile_show') }}"><i class="fa fa-user-circle fa-2x"></i></a>
+                    </form>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <body class="container-fluid" >
+    {% block body %}
+
+    {% endblock %}
+
+    </body>
+
+
+    <hr />
+    <footer id="footer" class="vspace20">
+        <div class="container">
+            <div class="row">
+                <div class="span4 offset1">
+                    <h4>Informations</h4>
+                    <ul class="nav nav-stacked">
+                        <li><a href="{{ path('cgv', {'cgv' : 1}) }}">CGV</a>
+                        <li><a href="{{ path('cgu', {'cgu' : 1}) }}">CGU</a>
+
+                    </ul>
+                </div>
+                <div class="span4">
+                    <h4>Notre boutique</h4>
+                    <p><i class="fa fa-marker"></i>&nbsp;Meudon 92000s</p>
+                </div>
+                <div class="span2">
+                    <h4>Nous contacter</h4>
+                    <i class="fa fa-envelope-o fa-2x"></i>
+
+
+                    <p><i class="fa fa-phone"></i>&nbsp;Tel: 01 54 00 00</p>
+                    <p><i class="fa fa-print"></i>&nbsp;Fax: 01 54 00 00 00</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <p>&copy; Copyright 2017 - ParkerCom</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    {% block javascripts %}{% endblock %}
+    </body>
+</html>
+

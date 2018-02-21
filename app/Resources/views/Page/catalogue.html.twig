@@ -1,0 +1,51 @@
+{% extends ":Layout.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+
+            <div class="span3">
+                {% include "::layout/modulesUsed/nav.html.twig" %}
+            </div>
+
+            <div class="span6">
+                <div class="row">
+                    <h1>Feuilleté votre {{ categorie }}</h1>
+
+                </div>
+
+            </div>
+            <div class="span12">
+
+                {% if 'composition' matches {{ categorie}}   %}
+                        <H3>1-trouver ou selectioner une inspiration</H3>
+
+                        {% include "MSFBundle:Page/inc:catalogue_composition.html.twig" %}
+
+
+                {% elseif  parfum matches '{{  categorie}} ' %}
+                        <h3>2-composer parmis nos {n} parfums</h3>
+
+                        {% include "MSFBundle:Page/inc:catalogue_parfum.html.twig" %}
+
+                {% elseif  support matches '{{  categorie}} ' %}
+                        <h3>3 - associer votre support au choix</h3>
+                        {% include "MSFBundle:Page/inc:catalogue_support.html.twig" %}
+
+                {% endif %}
+
+                <div class="pagination">
+                    <ul class="pagination">
+                        <li class="disabled"><a class="page-link" href="#"><span>Précédent</span></a></li>
+                        <li class="disabled"><a class="page-link" href="#"><span>1</span></a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends ":Layout.html.twig" %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="span3">
+                {% include "::layout/modulesUsed/nav.html.twig" %}
+            </div>
+        </div>
+        <div class="span12">
+            <div class="span6 offset3">
+                <h1>MY SCENT FACTORY NEWS </h1>
+            </div>
+            <div class="container">
+                <div class="span9 offset3">
+                    <h3> MSF BLOG</h3>
+                </div>
+                <div class="span12">
+                    <div class="row">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span8 offset2">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered">
+                                <caption>Article</caption>
+                                <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">date</th>
+                                    <th scope="col">titre</th>
+                                    <th scope="col">article</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+        <div class="container">
+            <div class="span12">
+                <div class="row">
+                    <div class="pagination">
+                        <ul>
+                            <li class="disabled"><span>Précédent</span></li>
+                            <li class="disabled"><span>1</span></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">Suivant</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}

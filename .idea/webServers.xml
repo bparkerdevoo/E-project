@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5be0a79c-788b-44b6-8c48-3ad2559ac59f" name="parkercoae@ssh.cluster021.hosting.ovh.net" url="http://msf.parkercommunication.pro/MyScentFactory">
+        <fileTransfer host="parkercoae@ssh.cluster021.hosting.ovh.net" port="22" rootFolder="/home/parkercoae" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
